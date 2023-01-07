@@ -1,0 +1,28 @@
+- Neovim fundamentals
+  - options
+  - keymaps
+  - colorscheme
+- Plugins manager: Packer.nvim
+- Code Intelligence related utils
+  - Project Wide: Mason.nvim
+    - lsp
+    - dap
+    - linters
+    - formatters
+  - File Wide
+    - tree-sitter
+- Explore Related utils
+  - Explorer
+  - Buffers "Tab"
+  - Fuzzy Finder
+  - Easy Terminal
+- Editing Utils
+  - Commenting
+  - Autopairs
+  - Completions
+    - Lsp Source
+    - Snippet Source
+    - Vim builtin Source
+    - Filesystem Source
+- Integration
+  - Git
