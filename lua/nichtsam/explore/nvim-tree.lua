@@ -20,7 +20,6 @@ nvim_tree.setup({
 	open_on_setup = false,
 	open_on_setup_file = false,
 	open_on_tab = false,
-	focus_empty_on_setup = false,
 	sort_by = "name",
 	root_dirs = {},
 	prefer_startup_root = false,
