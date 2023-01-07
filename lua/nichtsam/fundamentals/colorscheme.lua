@@ -18,11 +18,3 @@ if not colorscheme_ok then
 	vim.notify("colorscheme " .. colorscheme .. " not found!")
 	return
 end
-
--- Autocommand that sets up neovim coloerscheme
---vim.cmd([[
---    augroup color_scheme
---    autocmd!
---    autocmd User PackerComplete colorscheme ]] .. colorscheme .. [[
---    augroup end
---]])
