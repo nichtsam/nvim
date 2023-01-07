@@ -1,11 +1,13 @@
 -- Check for general options
-local opts_ok, opts = pcall(require, "nichtsam.mason.lsp.settings.opts")
+local opts_ok, opts = pcall(require, "nichtsam.code_intelligence.mason.lsp.settings.opts")
 if not opts_ok then
+	vim.notify("basic options for LSP handlers not found!")
 	return
 end
 
 local mason_lspconfig_ok, mason_lspconfig = pcall(require, "mason-lspconfig")
 if not mason_lspconfig_ok then
+	vim.notify("mason-lspconfig not found!")
 	return
 end
 
@@ -29,14 +31,22 @@ mason_lspconfig.setup_handlers({
 	end,
 	-- lua specific register
 	["sumneko_lua"] = function()
-		require("lspconfig").sumneko_lua.setup(
-			vim.tbl_deep_extend("force", opts, require("nichtsam.mason.lsp.settings.sumneko_lua"))
-		)
+		local specific_opts_ok, specific_opts =
+			pcall(require, "nichtsam.code_intelligence.mason.lsp.settings.sumneko_lua")
+		if not specific_opts_ok then
+			vim.notify("Specific options for sumneko_lua handler not found!")
+			return
+		end
+
+		require("lspconfig").sumneko_lua.setup(vim.tbl_deep_extend("force", opts, specific_opts))
 	end,
 	-- json specific register
 	["jsonls"] = function()
-		require("lspconfig").jsonls.setup(
-			vim.tbl_deep_extend("force", opts, require("nichtsam.mason.lsp.settings.jsonls"))
-		)
+		local specific_opts_ok, specific_opts = pcall(require, "nichtsam.code_intelligence.mason.lsp.settings.jsonls")
+		if not specific_opts_ok then
+			vim.notify("Specific options for sumneko_lua handler not found!")
+			return
+		end
+		require("lspconfig").jsonls.setup(vim.tbl_deep_extend("force", opts, specific_opts))
 	end,
 })
