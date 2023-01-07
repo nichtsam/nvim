@@ -56,7 +56,18 @@ return packer.startup(function(use)
 	use("moll/vim-bbye") -- Delete buffers and close files in Vim without closing your windows or messing up your layout.
 
 	-- Theme
-	use("folke/tokyonight.nvim") -- Tokyo Night theme for neovim
+	use({
+		"folke/tokyonight.nvim",
+		config = function()
+			local tokyonight = require("tokyonight")
+
+			tokyonight.setup({
+				transparent = true,
+			})
+
+			vim.cmd("colorscheme tokyonight")
+		end,
+	})
 
 	-- Integrations
 	use("wakatime/vim-wakatime") -- WakaTime Integration
