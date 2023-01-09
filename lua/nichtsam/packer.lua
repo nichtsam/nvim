@@ -77,19 +77,37 @@ return packer.startup(function(use)
 	use("hrsh7th/nvim-cmp") -- The completion plugin
 	use("hrsh7th/cmp-buffer") -- Buffer completions
 	use("hrsh7th/cmp-path") -- Path completions
-	use("hrsh7th/cmp-cmdline") -- cmdline completions
 	use("saadparwaiz1/cmp_luasnip") -- Snippet completions
 	use("hrsh7th/cmp-nvim-lsp") -- LSP completions
+	use("hrsh7th/cmp-nvim-lua") -- nvim-cmp source for neovim Lua API
+	use("hrsh7th/cmp-cmdline") -- cmdline completions
 
 	-- Snippets
 	use("L3MON4D3/LuaSnip") -- Snippet engine
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 
 	-- LSP
-	use("neovim/nvim-lspconfig") -- Configurations for Nvim LSP
-	use("williamboman/mason.nvim") -- Easily install and manage LSP servers, DAP servers, linters, and formatters.
-	use("williamboman/mason-lspconfig.nvim") -- Makes it easier to use lspconfig with mason.nvim
-	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
+	use({
+		"VonHeikemen/lsp-zero.nvim",
+		requires = {
+			-- Dependency: LSP util
+			{ "neovim/nvim-lspconfig" }, -- Configurations for Nvim LSP
+			{ "williamboman/mason.nvim" }, -- Easily install and manage LSP servers, DAP servers, linters, and formatters.
+			{ "williamboman/mason-lspconfig.nvim" }, -- Makes it easier to use lspconfig with mason.nvim
+
+			-- Dependency: Autocompletion
+			{ "hrsh7th/nvim-cmp" },
+			{ "hrsh7th/cmp-buffer" },
+			{ "hrsh7th/cmp-path" },
+			{ "saadparwaiz1/cmp_luasnip" },
+			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "hrsh7th/cmp-nvim-lua" },
+
+			-- Dependency: Snippets
+			{ "L3MON4D3/LuaSnip" },
+			{ "rafamadriz/friendly-snippets" },
+		},
+	})
 
 	-- Terminal
 	use("akinsho/toggleterm.nvim") -- A Better Terminal
