@@ -11,6 +11,11 @@
     - formatters
   - File Wide
     - tree-sitter
+  - Completions
+    - Lsp Source
+    - Snippet Source
+    - Vim builtin Source
+    - Filesystem Source
 - Explore Related utils
   - Explorer
   - Buffers "Tab"
@@ -19,10 +24,5 @@
 - Editing Utils
   - Commenting
   - Autopairs
-  - Completions
-    - Lsp Source
-    - Snippet Source
-    - Vim builtin Source
-    - Filesystem Source
 - Integration
   - Git
