@@ -1,21 +1,27 @@
+# My Neovim Setup
+
+## General Structure
+Here is a rough mindmap of how I separate individual parts.
+However, Lsp is a big part and lots of thing is related to it, I do my best.
+
 - Neovim fundamentals
   - options
   - keymaps
   - colorscheme
-- Plugins manager: Packer.nvim
+- Plugins manager (Packer.nvim)
 - Code Intelligence related utils
-  - Project Wide: Mason.nvim
+  - Project Wide
     - lsp
     - dap
     - linters
     - formatters
-  - File Wide
-    - tree-sitter
   - Completions
     - Lsp Source
     - Snippet Source
     - Vim builtin Source
     - Filesystem Source
+  - File Wide 
+    - tree-sitter
 - Explore Related utils
   - Explorer
   - Buffers "Tab"
