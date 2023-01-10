@@ -32,3 +32,9 @@ However, Lsp is a big part and lots of thing is related to it, I do my best.
   - Autopairs
 - Integration
   - Git
+
+## TODO
+- organize "## General Structure" a bit more.
+- sometime warns "Client 1 quit with exit code 0 and signal 6", what?
+- might need to integrate lsp-zero with null-ls, not sure.
+- maybe add some cmp source, cmp-cmdline for one.
