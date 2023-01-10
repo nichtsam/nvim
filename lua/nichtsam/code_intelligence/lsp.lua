@@ -12,6 +12,7 @@ lsp.ensure_installed({
 })
 
 lsp.set_preferences({
+  set_lsp_keymaps = { omit = { '<F2>', '<F4>' } },
   sign_icons = {
     error = 'E',
     warn = 'W',
