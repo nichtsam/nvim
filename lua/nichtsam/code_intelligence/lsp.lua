@@ -32,6 +32,10 @@ lsp.on_attach(function(client, bufnr)
     })
   end
 
+  local opts = { buffer = bufnr, remap = false }
+
+  vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+  vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 end)
 
 -- Fix Undefined global 'vim'
