@@ -5,20 +5,20 @@ lsp.preset("recommended")
 
 -- Install these servers
 lsp.ensure_installed({
-  'tsserver',
-  'eslint',
-  'sumneko_lua',
-  'rust_analyzer'
+  "tsserver",
+  "eslint",
+  "sumneko_lua",
+  "rust_analyzer",
 })
 
 lsp.set_preferences({
-  set_lsp_keymaps = { omit = { '<F2>', '<F4>' } },
+  set_lsp_keymaps = { omit = { "<F2>", "<F4>" } },
   sign_icons = {
-    error = 'E',
-    warn = 'W',
-    hint = 'H',
-    info = 'I'
-  }
+    error = "E",
+    warn = "W",
+    hint = "H",
+    info = "I",
+  },
 })
 
 local group = vim.api.nvim_create_augroup("LspFormatting", { clear = true })
@@ -40,14 +40,24 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 -- Fix Undefined global 'vim'
-lsp.configure('sumneko_lua', {
+lsp.configure("sumneko_lua", {
   settings = {
     Lua = {
       diagnostics = {
-        globals = { 'vim' }
-      }
-    }
-  }
+        globals = { "vim" },
+      },
+    },
+  },
 })
 
 lsp.setup()
+
+local mason_nullls = require("mason-null-ls")
+local nullls = require("null-ls")
+mason_nullls.setup({
+  ensure_installed = { "prettier" },
+  automatic_installation = true,
+  automatic_setup = true,
+})
+nullls.setup()
+mason_nullls.setup_handlers({})
