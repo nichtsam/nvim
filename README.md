@@ -1,7 +1,7 @@
 # My Neovim Setup
 
 ## General Structure
-Here is a rough mindmap of how I separate individual parts.
+Here is a rough mindmap of how I separate individual parts.  
 However, Lsp is a big part and lots of thing is related to it, I do my best.
 
 - Neovim fundamentals
