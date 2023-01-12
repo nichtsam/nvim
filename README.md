@@ -15,13 +15,13 @@ However, Lsp is a big part and lots of thing is related to it, I do my best.
     - dap
     - linters
     - formatters
-  - Completions
-    - Lsp Source
-    - Snippet Source
-    - Vim builtin Source
-    - Filesystem Source
   - File Wide 
     - tree-sitter
+    - Completions
+      - Lsp Source
+      - Snippet Source
+      - Vim builtin Source
+      - Filesystem Source
 - Explore Related utils
   - Explorer
   - Buffers "Tab"
