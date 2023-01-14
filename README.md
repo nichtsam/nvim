@@ -40,12 +40,6 @@ However, Lsp is a big part and lots of thing is related to it, I do my best.
 - sometime warns "Client 1 quit with exit code 0 and signal 6", what?
 - keep an eye on `lsp-zero`'s integration with `null-ls`.
 - issue: [LSP][null-ls] timeout on big project
-- modify indenting behavior
-  ```lua
-      shiftwidth = 4, -- the number of spaces inserted for each indentation
-      tabstop = 4, -- insert 4 spaces for a tab
-      softtabstop = 4,
-  ```
 - figure out the relation between formatters and the nvim options above.
   
 ### Wanted Feature
