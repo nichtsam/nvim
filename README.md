@@ -39,9 +39,9 @@ However, Lsp is a big part and lots of thing is related to it, I do my best.
 ### Misc
 
 - organize "## General Structure" a bit more.
-- sometime warns "Client 1 quit with exit code 0 and signal 6", what?
 - keep an eye on `lsp-zero`'s integration with `null-ls`.
 - issue: [LSP][null-ls] timeout on big project
+- issue: tailwindcss lsp client timeout every now and then.
 - figure out the relation between formatters and nvim tapstop related options above.
 
 ### Wanted Feature
