@@ -46,12 +46,10 @@ However, Lsp is a big part and lots of thing is related to it, I do my best.
 
 ### Wanted Feature
 
-- status line
 - maybe add some cmp source, cmp-cmdline for one.
 - Autopair for tags isn't working.
 
 ### Try outs
 
 - ThePrimeagen/harpoon
-- heirline.nvim (status line plugin)
 - mbbill/undotree
