@@ -52,7 +52,6 @@ However, Lsp is a big part and lots of thing is related to it, I do my best.
 
 ### Try outs
 
-- Neo-tree.nvim (nvim-tree alternative)
 - ThePrimeagen/harpoon
 - heirline.nvim (status line plugin)
 - mbbill/undotree
