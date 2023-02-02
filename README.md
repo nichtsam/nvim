@@ -9,7 +9,7 @@ However, Lsp is a big part and lots of thing is related to it, I do my best.
   - options
   - keymaps
   - colorscheme
-- Plugins manager (Packer.nvim)
+- Plugins manager (lazy.nvim)
 - Code Intelligence related utils
   - Project Wide
     - lsp
