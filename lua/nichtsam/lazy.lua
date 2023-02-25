@@ -22,25 +22,27 @@ return lazy.setup({
 	-- Fundamental
 	"nvim-lua/popup.nvim", -- An implementation of the Popup API from vim in Neovim
 	"nvim-lua/plenary.nvim", -- Useful lua functions used ny lots of plugins
-	"kyazdani42/nvim-web-devicons", -- For file icons
+	"nvim-tree/nvim-web-devicons", -- For file icons
 
 	-- Explorer
 	{
-		"kyazdani42/nvim-tree.lua", -- A file explorer tree for neovim written in lua
-		dependencies = { "kyazdani42/nvim-web-devicons" }, -- optional, for file icons
+		"nvim-tree/nvim-tree.lua", -- A file explorer tree for neovim written in lua
+		dependencies = {
+			"nvim-tree/nvim-web-devicons", -- optional, for file icons
+		},
 	},
 
 	-- Bufferline
 	{
 		"akinsho/bufferline.nvim", -- A snazzy buffer line (with tabpage integration) for Neovim
-		dependencies = { "kyazdani42/nvim-web-devicons" }, -- Recommended (for coloured icons)
+		dependencies = { "nvim-tree/nvim-web-devicons" }, -- Recommended (for coloured icons)
 	},
 	"moll/vim-bbye", -- Delete buffers and close files in Vim without closing your windows or messing up your layout.
 
 	-- Statusline
 	{
 		"nvim-lualine/lualine.nvim",
-		dependencies = { "kyazdani42/nvim-web-devicons", lazy = true },
+		dependencies = { "nvim-tree/nvim-web-devicons", lazy = true },
 	},
 
 	-- Theme
